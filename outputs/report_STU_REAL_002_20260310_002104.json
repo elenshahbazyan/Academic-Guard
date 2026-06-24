@@ -1,0 +1,78 @@
+{
+  "student_id": "STU_REAL_002",
+  "timestamp": "2026-03-10T00:20:16.965397",
+  "agent1": {
+    "agent": "Agent 1 \u2014 ML Ensemble",
+    "risk_score": 13.3,
+    "verdict": "LOW",
+    "top_factors": [
+      {
+        "feature": "Curricular_units_2nd_sem_approved",
+        "value": 5.0,
+        "importance": 0.1647
+      },
+      {
+        "feature": "Curricular_units_2nd_sem_grade",
+        "value": 12.14285714,
+        "importance": 0.1086
+      },
+      {
+        "feature": "Curricular_units_1st_sem_approved",
+        "value": 5.0,
+        "importance": 0.0833
+      },
+      {
+        "feature": "Curricular_units_1st_sem_grade",
+        "value": 12.0,
+        "importance": 0.0667
+      },
+      {
+        "feature": "Tuition_fees_up_to_date",
+        "value": 1.0,
+        "importance": 0.0625
+      }
+    ]
+  },
+  "agent2": {
+    "risk_category": "LOW",
+    "rules_fired": [],
+    "reasoning_chain": [],
+    "priority_flags": [
+      "\u2691 Displaced Student \u2014 May Need Extra Support"
+    ],
+    "actions": [],
+    "override_ml": false,
+    "override_reason": null
+  },
+  "agent3": {
+    "final_risk": "LOW",
+    "summary": "The student demonstrates a good academic record with a strong 1st semester GPA, but their 2nd semester performance shows a slight dip. ",
+    "interventions": [
+      {
+        "step": 1,
+        "action": "Encourage the student to review their course load and workload to ensure they are managing their time effectively.",
+        "when": "After the student completes their current semester"
+      },
+      {
+        "step": 2,
+        "action": "Offer resources on time management and study skills, such as workshops or online tools.",
+        "when": "During the student's first semester"
+      },
+      {
+        "step": 3,
+        "action": "Provide information on academic support services, such as tutoring or writing centers, to help the student improve their academic performance.",
+        "when": "After the student completes their first semester"
+      }
+    ],
+    "message_to_student": "Keep up the good work!  We're here to support you in achieving your academic goals. ",
+    "escalate": false
+  },
+  "final": {
+    "student_id": "STU_REAL_002",
+    "ml_score": 13.3,
+    "expert": "LOW",
+    "final_risk": "LOW",
+    "conflict": false,
+    "escalate": false
+  }
+}

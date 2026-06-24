@@ -1,0 +1,78 @@
+{
+  "student_id": "STU_REAL_002",
+  "timestamp": "2026-03-09T23:20:35.985458",
+  "agent1": {
+    "agent": "Agent 1 \u2014 ML Ensemble",
+    "risk_score": 13.3,
+    "verdict": "LOW",
+    "top_factors": [
+      {
+        "feature": "Curricular_units_2nd_sem_approved",
+        "value": 5.0,
+        "importance": 0.1647
+      },
+      {
+        "feature": "Curricular_units_2nd_sem_grade",
+        "value": 12.14285714,
+        "importance": 0.1086
+      },
+      {
+        "feature": "Curricular_units_1st_sem_approved",
+        "value": 5.0,
+        "importance": 0.0833
+      },
+      {
+        "feature": "Curricular_units_1st_sem_grade",
+        "value": 12.0,
+        "importance": 0.0667
+      },
+      {
+        "feature": "Tuition_fees_up_to_date",
+        "value": 1.0,
+        "importance": 0.0625
+      }
+    ]
+  },
+  "agent2": {
+    "risk_category": "LOW",
+    "rules_fired": [],
+    "reasoning_chain": [],
+    "priority_flags": [
+      "\u2691 Displaced Student \u2014 May Need Extra Support"
+    ],
+    "actions": [],
+    "override_ml": false,
+    "override_reason": null
+  },
+  "agent3": {
+    "final_risk": "LOW",
+    "summary": "This student is performing well academically with a strong 1st semester GPA, but their 2nd semester grade suggests potential for improvement.",
+    "interventions": [
+      {
+        "step": 1,
+        "action": "Encourage the student to explore academic resources and support services offered by the institution.",
+        "when": "After the student's 2nd semester grade is reviewed"
+      },
+      {
+        "step": 2,
+        "action": "Provide the student with information about tutoring and study skills workshops.",
+        "when": "During the student's first week of the semester"
+      },
+      {
+        "step": 3,
+        "action": "Offer the student a one-on-one meeting to discuss their academic progress and goals.",
+        "when": "After the student's 2nd semester grade is reviewed"
+      }
+    ],
+    "message_to_student": "Keep up the great work! There are resources available to help you succeed, so don't hesitate to reach out if you need any assistance.",
+    "escalate": false
+  },
+  "final": {
+    "student_id": "STU_REAL_002",
+    "ml_score": 13.3,
+    "expert": "LOW",
+    "final_risk": "LOW",
+    "conflict": false,
+    "escalate": false
+  }
+}

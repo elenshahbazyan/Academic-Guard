@@ -1,0 +1,78 @@
+{
+  "student_id": "STU_HIGH_RISK",
+  "timestamp": "2026-03-10T00:27:01.944808",
+  "agent1": {
+    "agent": "Agent 1 \u2014 ML Ensemble",
+    "risk_score": 48.1,
+    "verdict": "MEDIUM",
+    "top_factors": [
+      {
+        "feature": "Curricular_units_2nd_sem_approved",
+        "value": 0.0,
+        "importance": 0.1647
+      },
+      {
+        "feature": "Curricular_units_2nd_sem_grade",
+        "value": 0.0,
+        "importance": 0.1086
+      },
+      {
+        "feature": "Curricular_units_1st_sem_approved",
+        "value": 0.0,
+        "importance": 0.0833
+      },
+      {
+        "feature": "Curricular_units_1st_sem_grade",
+        "value": 0.0,
+        "importance": 0.0667
+      },
+      {
+        "feature": "Tuition_fees_up_to_date",
+        "value": 1.0,
+        "importance": 0.0625
+      }
+    ]
+  },
+  "agent2": {
+    "risk_category": "LOW",
+    "rules_fired": [],
+    "reasoning_chain": [],
+    "priority_flags": [
+      "\u2691 Displaced Student \u2014 May Need Extra Support"
+    ],
+    "actions": [],
+    "override_ml": false,
+    "override_reason": null
+  },
+  "agent3": {
+    "final_risk": "MEDIUM",
+    "summary": "The student has a moderate risk of academic and financial challenges due to their low academic performance and lack of scholarship support.",
+    "interventions": [
+      {
+        "step": 1,
+        "action": "Encourage the student to meet with an academic advisor to discuss course selection and academic support resources.",
+        "when": "immediately"
+      },
+      {
+        "step": 2,
+        "action": "Recommend the student explore scholarship opportunities and financial aid options.",
+        "when": "immediately"
+      },
+      {
+        "step": 3,
+        "action": "Provide the student with resources on time management and study skills.",
+        "when": "within 1 week"
+      }
+    ],
+    "message_to_student": "We're here to support you in achieving your academic goals. Let's work together to create a plan for success.",
+    "escalate": false
+  },
+  "final": {
+    "student_id": "STU_HIGH_RISK",
+    "ml_score": 48.1,
+    "expert": "LOW",
+    "final_risk": "MEDIUM",
+    "conflict": false,
+    "escalate": false
+  }
+}

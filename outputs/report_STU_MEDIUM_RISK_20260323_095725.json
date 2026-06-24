@@ -1,0 +1,129 @@
+{
+  "student_id": "STU_MEDIUM_RISK",
+  "timestamp": "2026-03-23T09:56:14.247267",
+  "agent1": {
+    "agent": "Agent 1 \u2014 Random Forest",
+    "risk_score": 85.5,
+    "verdict": "CRITICAL",
+    "top_factors": [
+      {
+        "feature": "Curricular_units_2nd_sem_approved",
+        "value": 1.0,
+        "importance": 0.1647
+      },
+      {
+        "feature": "Curricular_units_2nd_sem_grade",
+        "value": 10.0,
+        "importance": 0.1086
+      },
+      {
+        "feature": "Curricular_units_1st_sem_approved",
+        "value": 0.0,
+        "importance": 0.0833
+      },
+      {
+        "feature": "Curricular_units_1st_sem_grade",
+        "value": 0.0,
+        "importance": 0.0667
+      },
+      {
+        "feature": "Tuition_fees_up_to_date",
+        "value": 0.0,
+        "importance": 0.0625
+      }
+    ]
+  },
+  "agent2": {
+    "risk_category": "CRITICAL",
+    "rules_fired": [
+      {
+        "id": "R01",
+        "name": "No Units Approved Sem 1",
+        "severity": "CRITICAL",
+        "message": "Enrolled in 7 units but approved 0 in semester 1"
+      },
+      {
+        "id": "R04",
+        "name": "Low Approval Rate Sem 2",
+        "severity": "HIGH",
+        "message": "Only 1/7 units approved in sem 2 (14%)"
+      },
+      {
+        "id": "R09",
+        "name": "Tuition Not Paid",
+        "severity": "HIGH",
+        "message": "Tuition fees are overdue"
+      },
+      {
+        "id": "R10",
+        "name": "Debtor",
+        "severity": "MEDIUM",
+        "message": "Student flagged as a debtor"
+      },
+      {
+        "id": "R11",
+        "name": "Financial + Academic Crisis",
+        "severity": "CRITICAL",
+        "message": "Tuition overdue AND failing academically"
+      },
+      {
+        "id": "R13",
+        "name": "Mature Student Struggling",
+        "severity": "MEDIUM",
+        "message": "Mature student (age 37) showing academic risk"
+      }
+    ],
+    "reasoning_chain": [
+      "[CRITICAL] No Units Approved Sem 1: Enrolled in 7 units but approved 0 in semester 1",
+      "[HIGH] Low Approval Rate Sem 2: Only 1/7 units approved in sem 2 (14%)",
+      "[HIGH] Tuition Not Paid: Tuition fees are overdue",
+      "[MEDIUM] Debtor: Student flagged as a debtor",
+      "[CRITICAL] Financial + Academic Crisis: Tuition overdue AND failing academically",
+      "[MEDIUM] Mature Student Struggling: Mature student (age 37) showing academic risk"
+    ],
+    "priority_flags": [
+      "\u2691 Tuition Overdue \u2014 Financial Risk"
+    ],
+    "actions": [
+      "Financial counseling referral",
+      "Financial aid office referral",
+      "Immediate academic intervention required",
+      "Adult learner support program referral",
+      "Priority case \u2014 multi-department emergency intervention",
+      "Schedule advisor meeting this week"
+    ],
+    "override_ml": false,
+    "override_reason": null
+  },
+  "agent3": {
+    "final_risk": "CRITICAL",
+    "summary": "This mature student is facing a critical combination of academic and financial challenges, including overdue tuition and failing grades.",
+    "interventions": [
+      {
+        "step": 1,
+        "action": "Contact the student to discuss their academic progress and potential solutions for catching up on units. Offer support in navigating the process of re-enrolling or adjusting course load.",
+        "when": "immediately"
+      },
+      {
+        "step": 2,
+        "action": "Connect with the student's financial aid office to explore options for tuition assistance or payment plans.  Offer resources and guidance on accessing potential scholarships.",
+        "when": "within 24 hours"
+      },
+      {
+        "step": 3,
+        "action": "Recommend connecting with campus counseling services or other support groups for academic and emotional well-being. Offer information about tutoring and study skills workshops.",
+        "when": "immediately"
+      }
+    ],
+    "message_to_student": "We understand you're facing a challenging situation academically and financially. We are here to help you navigate this, so please reach out to us for support and guidance.",
+    "escalate": true
+  },
+  "final": {
+    "student_id": "STU_MEDIUM_RISK",
+    "ml_score": 85.5,
+    "expert": "CRITICAL",
+    "final_risk": "CRITICAL",
+    "conflict": false,
+    "escalate": true
+  }
+}

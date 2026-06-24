@@ -1,0 +1,97 @@
+{
+  "student_id": "STU_REAL_001",
+  "timestamp": "2026-03-09T22:30:42.067887",
+  "agent1": {
+    "agent": "Agent 1 \u2014 ML Ensemble",
+    "risk_score": 40.5,
+    "verdict": "MEDIUM",
+    "top_factors": [
+      {
+        "feature": "Curricular_units_2nd_sem_approved",
+        "value": 5.0,
+        "importance": 0.1647
+      },
+      {
+        "feature": "Curricular_units_2nd_sem_grade",
+        "value": 10.4,
+        "importance": 0.1086
+      },
+      {
+        "feature": "Curricular_units_1st_sem_approved",
+        "value": 5.0,
+        "importance": 0.0833
+      },
+      {
+        "feature": "Curricular_units_1st_sem_grade",
+        "value": 12.4,
+        "importance": 0.0667
+      },
+      {
+        "feature": "Tuition_fees_up_to_date",
+        "value": 1.0,
+        "importance": 0.0625
+      }
+    ]
+  },
+  "agent2": {
+    "risk_category": "CRITICAL",
+    "rules_fired": [
+      {
+        "id": "R01",
+        "name": "No Units Approved Sem 1",
+        "severity": "CRITICAL",
+        "message": "Student approved 0 units in semester 1"
+      },
+      {
+        "id": "R03",
+        "name": "Failed Both Semesters",
+        "severity": "CRITICAL",
+        "message": "No units approved in either semester"
+      }
+    ],
+    "reasoning_chain": [
+      "[CRITICAL] No Units Approved Sem 1: Student approved 0 units in semester 1",
+      "[CRITICAL] Failed Both Semesters: No units approved in either semester"
+    ],
+    "priority_flags": [
+      "\u2691 Displaced Student \u2014 May Need Extra Support"
+    ],
+    "actions": [
+      "Emergency intervention \u2014 escalate to department head",
+      "Immediate academic intervention required"
+    ],
+    "override_ml": true,
+    "override_reason": "Expert rates risk higher than ML. Key: No Units Approved Sem 1, Failed Both Semesters"
+  },
+  "agent3": {
+    "final_risk": "HIGH",
+    "summary": "This student is at high risk due to failing both semesters and not having any units approved in the first semester.",
+    "interventions": [
+      {
+        "step": 1,
+        "action": "Schedule a meeting with the student to discuss their academic performance and potential solutions.",
+        "when": "Immediately"
+      },
+      {
+        "step": 2,
+        "action": "Review the student's academic plan and discuss potential course selection for the upcoming semesters.",
+        "when": "Within 24 hours"
+      },
+      {
+        "step": 3,
+        "action": "Refer the student to academic support services such as tutoring or study groups if needed.",
+        "when": "Within 48 hours"
+      }
+    ],
+    "message_to_student": "We are here to support you in achieving your academic goals. Let's work together to develop a plan to improve your performance and ensure your success.",
+    "escalate": true
+  },
+  "final": {
+    "student_id": "STU_REAL_001",
+    "ml_score": 40.5,
+    "expert": "CRITICAL",
+    "final_risk": "HIGH",
+    "conflict": true,
+    "escalate": true
+  }
+}

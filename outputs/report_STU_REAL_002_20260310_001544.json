@@ -1,0 +1,78 @@
+{
+  "student_id": "STU_REAL_002",
+  "timestamp": "2026-03-10T00:14:56.639457",
+  "agent1": {
+    "agent": "Agent 1 \u2014 ML Ensemble",
+    "risk_score": 13.3,
+    "verdict": "LOW",
+    "top_factors": [
+      {
+        "feature": "Curricular_units_2nd_sem_approved",
+        "value": 5.0,
+        "importance": 0.1647
+      },
+      {
+        "feature": "Curricular_units_2nd_sem_grade",
+        "value": 12.14285714,
+        "importance": 0.1086
+      },
+      {
+        "feature": "Curricular_units_1st_sem_approved",
+        "value": 5.0,
+        "importance": 0.0833
+      },
+      {
+        "feature": "Curricular_units_1st_sem_grade",
+        "value": 12.0,
+        "importance": 0.0667
+      },
+      {
+        "feature": "Tuition_fees_up_to_date",
+        "value": 1.0,
+        "importance": 0.0625
+      }
+    ]
+  },
+  "agent2": {
+    "risk_category": "LOW",
+    "rules_fired": [],
+    "reasoning_chain": [],
+    "priority_flags": [
+      "\u2691 Displaced Student \u2014 May Need Extra Support"
+    ],
+    "actions": [],
+    "override_ml": false,
+    "override_reason": null
+  },
+  "agent3": {
+    "final_risk": "LOW",
+    "summary": "This student demonstrates a strong academic record, but their overall risk level is relatively low.",
+    "interventions": [
+      {
+        "step": 1,
+        "action": "Encourage the student to continue their current trajectory and explore academic resources like tutoring or study groups.",
+        "when": "Initial meeting"
+      },
+      {
+        "step": 2,
+        "action": "Provide information about scholarships and financial aid opportunities, even if the student is not currently eligible.",
+        "when": "During initial meeting"
+      },
+      {
+        "step": 3,
+        "action": "Offer additional support and resources, such as academic advising and career counseling, to help the student achieve their academic and professional goals.",
+        "when": "Regular check-ins"
+      }
+    ],
+    "message_to_student": "Keep up the great work, you're on the right track!  Let's explore some resources to help you reach your full potential.",
+    "escalate": false
+  },
+  "final": {
+    "student_id": "STU_REAL_002",
+    "ml_score": 13.3,
+    "expert": "LOW",
+    "final_risk": "LOW",
+    "conflict": false,
+    "escalate": false
+  }
+}

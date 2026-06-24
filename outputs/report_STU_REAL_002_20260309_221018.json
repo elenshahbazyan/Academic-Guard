@@ -1,0 +1,78 @@
+{
+  "student_id": "STU_REAL_002",
+  "timestamp": "2026-03-09T22:09:39.091305",
+  "agent1": {
+    "agent": "Agent 1 \u2014 ML Ensemble",
+    "risk_score": 25.0,
+    "verdict": "LOW",
+    "top_factors": [
+      {
+        "feature": "Admission_grade",
+        "value": 140.0,
+        "importance": 0.53
+      },
+      {
+        "feature": "Age_at_enrollment",
+        "value": 23.0,
+        "importance": 0.2093
+      },
+      {
+        "feature": "Tuition_fees_up_to_date",
+        "value": 1.0,
+        "importance": 0.146
+      },
+      {
+        "feature": "Scholarship_holder",
+        "value": 0.0,
+        "importance": 0.0396
+      },
+      {
+        "feature": "Debtor",
+        "value": 0.0,
+        "importance": 0.0293
+      }
+    ]
+  },
+  "agent2": {
+    "risk_category": "LOW",
+    "rules_fired": [],
+    "reasoning_chain": [],
+    "priority_flags": [
+      "\u2691 Displaced Student \u2014 May Need Housing/Social Support"
+    ],
+    "actions": [],
+    "override_ml": false,
+    "override_reason": null
+  },
+  "agent3": {
+    "final_risk": "LOW",
+    "summary": "This student has not yet started their academic journey with approved units and has no grades yet, indicating a need for guidance and support.",
+    "interventions": [
+      {
+        "step": 1,
+        "action": "Connect the student with an academic advisor to discuss course selection and academic planning.",
+        "when": "upon enrollment"
+      },
+      {
+        "step": 2,
+        "action": "Encourage the student to explore academic resources such as tutoring and study groups.",
+        "when": "upon enrollment"
+      },
+      {
+        "step": 3,
+        "action": "Provide information on financial aid options and scholarship opportunities.",
+        "when": "upon enrollment"
+      }
+    ],
+    "message_to_student": "Welcome to the university! We're here to support you in achieving your academic goals. Let's work together to build a successful academic journey for you.",
+    "escalate": false
+  },
+  "final": {
+    "student_id": "STU_REAL_002",
+    "ml_score": 25.0,
+    "expert": "LOW",
+    "final_risk": "LOW",
+    "conflict": false,
+    "escalate": false
+  }
+}

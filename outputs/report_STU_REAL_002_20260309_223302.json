@@ -1,0 +1,97 @@
+{
+  "student_id": "STU_REAL_002",
+  "timestamp": "2026-03-09T22:31:52.914439",
+  "agent1": {
+    "agent": "Agent 1 \u2014 ML Ensemble",
+    "risk_score": 13.3,
+    "verdict": "LOW",
+    "top_factors": [
+      {
+        "feature": "Curricular_units_2nd_sem_approved",
+        "value": 5.0,
+        "importance": 0.1647
+      },
+      {
+        "feature": "Curricular_units_2nd_sem_grade",
+        "value": 12.14285714,
+        "importance": 0.1086
+      },
+      {
+        "feature": "Curricular_units_1st_sem_approved",
+        "value": 5.0,
+        "importance": 0.0833
+      },
+      {
+        "feature": "Curricular_units_1st_sem_grade",
+        "value": 12.0,
+        "importance": 0.0667
+      },
+      {
+        "feature": "Tuition_fees_up_to_date",
+        "value": 1.0,
+        "importance": 0.0625
+      }
+    ]
+  },
+  "agent2": {
+    "risk_category": "CRITICAL",
+    "rules_fired": [
+      {
+        "id": "R01",
+        "name": "No Units Approved Sem 1",
+        "severity": "CRITICAL",
+        "message": "Student approved 0 units in semester 1"
+      },
+      {
+        "id": "R03",
+        "name": "Failed Both Semesters",
+        "severity": "CRITICAL",
+        "message": "No units approved in either semester"
+      }
+    ],
+    "reasoning_chain": [
+      "[CRITICAL] No Units Approved Sem 1: Student approved 0 units in semester 1",
+      "[CRITICAL] Failed Both Semesters: No units approved in either semester"
+    ],
+    "priority_flags": [
+      "\u2691 Displaced Student \u2014 May Need Extra Support"
+    ],
+    "actions": [
+      "Emergency intervention \u2014 escalate to department head",
+      "Immediate academic intervention required"
+    ],
+    "override_ml": true,
+    "override_reason": "Expert rates risk higher than ML. Key: No Units Approved Sem 1, Failed Both Semesters"
+  },
+  "agent3": {
+    "final_risk": "CRITICAL",
+    "summary": "This student has failed both semesters due to a lack of approved units, indicating a potential risk of academic disengagement and a need for immediate intervention.",
+    "interventions": [
+      {
+        "step": 1,
+        "action": "Schedule a meeting with the student to discuss the reasons for the lack of units approved in both semesters and to explore potential solutions.",
+        "when": "immediately"
+      },
+      {
+        "step": 2,
+        "action": "Recommend the student pursue a course audit or a review of their academic plan to ensure they are on track for graduation.",
+        "when": "within 24 hours"
+      },
+      {
+        "step": 3,
+        "action": "Connect the student with academic support services such as tutoring, study groups, and academic advising to help them overcome academic challenges and improve their academic performance.",
+        "when": "within 48 hours"
+      }
+    ],
+    "message_to_student": "Your academic progress is important to us, and we want to help you succeed. Let's work together to get you back on track and achieve your academic goals.",
+    "escalate": true
+  },
+  "final": {
+    "student_id": "STU_REAL_002",
+    "ml_score": 13.3,
+    "expert": "CRITICAL",
+    "final_risk": "CRITICAL",
+    "conflict": true,
+    "escalate": true
+  }
+}

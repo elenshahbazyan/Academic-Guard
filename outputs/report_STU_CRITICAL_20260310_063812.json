@@ -1,0 +1,146 @@
+{
+  "student_id": "STU_CRITICAL",
+  "timestamp": "2026-03-10T06:36:54.703612",
+  "agent1": {
+    "agent": "Agent 1 \u2014 ML Ensemble",
+    "risk_score": 93.7,
+    "verdict": "CRITICAL",
+    "top_factors": [
+      {
+        "feature": "Curricular_units_2nd_sem_approved",
+        "value": 0,
+        "importance": 0.1647
+      },
+      {
+        "feature": "Curricular_units_2nd_sem_grade",
+        "value": 0.0,
+        "importance": 0.1086
+      },
+      {
+        "feature": "Curricular_units_1st_sem_approved",
+        "value": 0,
+        "importance": 0.0833
+      },
+      {
+        "feature": "Curricular_units_1st_sem_grade",
+        "value": 0.0,
+        "importance": 0.0667
+      },
+      {
+        "feature": "Tuition_fees_up_to_date",
+        "value": 0,
+        "importance": 0.0625
+      }
+    ]
+  },
+  "agent2": {
+    "risk_category": "CRITICAL",
+    "rules_fired": [
+      {
+        "id": "R01",
+        "name": "No Units Approved Sem 1",
+        "severity": "CRITICAL",
+        "message": "Enrolled in 7 units but approved 0 in semester 1"
+      },
+      {
+        "id": "R03",
+        "name": "No Units Approved Sem 2",
+        "severity": "CRITICAL",
+        "message": "Enrolled in 7 units but approved 0 in semester 2"
+      },
+      {
+        "id": "R07",
+        "name": "Failed Both Semesters",
+        "severity": "CRITICAL",
+        "message": "Zero units approved across both semesters"
+      },
+      {
+        "id": "R08",
+        "name": "Not Taking Evaluations Sem 1",
+        "severity": "HIGH",
+        "message": "Student enrolled but took no evaluations in semester 1 \u2014 disengaged"
+      },
+      {
+        "id": "R09",
+        "name": "Tuition Not Paid",
+        "severity": "HIGH",
+        "message": "Tuition fees are overdue"
+      },
+      {
+        "id": "R10",
+        "name": "Debtor",
+        "severity": "MEDIUM",
+        "message": "Student flagged as a debtor"
+      },
+      {
+        "id": "R11",
+        "name": "Financial + Academic Crisis",
+        "severity": "CRITICAL",
+        "message": "Tuition overdue AND failing academically"
+      },
+      {
+        "id": "R13",
+        "name": "Mature Student Struggling",
+        "severity": "MEDIUM",
+        "message": "Mature student (age 38) showing academic risk"
+      }
+    ],
+    "reasoning_chain": [
+      "[CRITICAL] No Units Approved Sem 1: Enrolled in 7 units but approved 0 in semester 1",
+      "[CRITICAL] No Units Approved Sem 2: Enrolled in 7 units but approved 0 in semester 2",
+      "[CRITICAL] Failed Both Semesters: Zero units approved across both semesters",
+      "[HIGH] Not Taking Evaluations Sem 1: Student enrolled but took no evaluations in semester 1 \u2014 disengaged",
+      "[HIGH] Tuition Not Paid: Tuition fees are overdue",
+      "[MEDIUM] Debtor: Student flagged as a debtor",
+      "[CRITICAL] Financial + Academic Crisis: Tuition overdue AND failing academically",
+      "[MEDIUM] Mature Student Struggling: Mature student (age 38) showing academic risk"
+    ],
+    "priority_flags": [
+      "\u2691 Tuition Overdue \u2014 Financial Risk",
+      "\u2691 Displaced Student \u2014 May Need Extra Support"
+    ],
+    "actions": [
+      "Emergency multi-department intervention",
+      "Financial counseling referral",
+      "Urgent outreach \u2014 student may have abandoned studies",
+      "Financial aid office referral",
+      "Adult learner support program referral",
+      "Emergency intervention \u2014 escalate to advisor",
+      "Immediate academic intervention required",
+      "Priority case \u2014 multi-department emergency intervention"
+    ],
+    "override_ml": false,
+    "override_reason": null
+  },
+  "agent3": {
+    "final_risk": "HIGH",
+    "summary": "This student is facing a critical combination of academic and financial challenges, including failing to complete coursework and overdue tuition, indicating a high risk of academic disengagement and potential financial hardship.",
+    "interventions": [
+      {
+        "step": 1,
+        "action": "Schedule a meeting with the student to discuss their academic progress and financial situation.",
+        "when": "within 24 hours"
+      },
+      {
+        "step": 2,
+        "action": "Provide information about available academic support resources, such as tutoring, study groups, and academic advising.",
+        "when": "during the meeting"
+      },
+      {
+        "step": 3,
+        "action": "Explore options for tuition payment assistance, such as payment plans or scholarships.",
+        "when": "during the meeting"
+      }
+    ],
+    "message_to_student": "We understand you're facing some challenges, and we're here to help you succeed. Let's work together to address your academic and financial concerns and get you back on track.",
+    "escalate": true
+  },
+  "final": {
+    "student_id": "STU_CRITICAL",
+    "ml_score": 93.7,
+    "expert": "CRITICAL",
+    "final_risk": "HIGH",
+    "conflict": false,
+    "escalate": true
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "student_id": "STU_REAL_001",
+  "timestamp": "2026-03-09T23:19:44.052126",
+  "agent1": {
+    "agent": "Agent 1 \u2014 ML Ensemble",
+    "risk_score": 40.5,
+    "verdict": "MEDIUM",
+    "top_factors": [
+      {
+        "feature": "Curricular_units_2nd_sem_approved",
+        "value": 5.0,
+        "importance": 0.1647
+      },
+      {
+        "feature": "Curricular_units_2nd_sem_grade",
+        "value": 10.4,
+        "importance": 0.1086
+      },
+      {
+        "feature": "Curricular_units_1st_sem_approved",
+        "value": 5.0,
+        "importance": 0.0833
+      },
+      {
+        "feature": "Curricular_units_1st_sem_grade",
+        "value": 12.4,
+        "importance": 0.0667
+      },
+      {
+        "feature": "Tuition_fees_up_to_date",
+        "value": 1.0,
+        "importance": 0.0625
+      }
+    ]
+  },
+  "agent2": {
+    "risk_category": "LOW",
+    "rules_fired": [],
+    "reasoning_chain": [],
+    "priority_flags": [
+      "\u2691 Displaced Student \u2014 May Need Extra Support"
+    ],
+    "actions": [],
+    "override_ml": false,
+    "override_reason": null
+  },
+  "agent3": {
+    "final_risk": "MEDIUM",
+    "summary": "This student's academic performance shows a slight decline in their second semester, suggesting potential areas for improvement.",
+    "interventions": [
+      {
+        "step": 1,
+        "action": "Encourage the student to meet with their academic advisor to discuss their academic goals and explore potential support resources.",
+        "when": "Immediately"
+      },
+      {
+        "step": 2,
+        "action": "Recommend the student review their course selection and workload to ensure it aligns with their academic goals and time management skills.",
+        "when": "Within a week"
+      },
+      {
+        "step": 3,
+        "action": "Suggest the student explore tutoring or study groups to enhance their understanding of course material and improve their academic performance.",
+        "when": "Within two weeks"
+      }
+    ],
+    "message_to_student": "Your academic journey is a marathon, not a sprint.  We're here to support you in achieving your goals. Let's work together to make this semester a success.",
+    "escalate": false
+  },
+  "final": {
+    "student_id": "STU_REAL_001",
+    "ml_score": 40.5,
+    "expert": "LOW",
+    "final_risk": "MEDIUM",
+    "conflict": false,
+    "escalate": false
+  }
+}

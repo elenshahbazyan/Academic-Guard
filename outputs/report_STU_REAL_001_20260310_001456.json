@@ -1,0 +1,78 @@
+{
+  "student_id": "STU_REAL_001",
+  "timestamp": "2026-03-10T00:13:47.199822",
+  "agent1": {
+    "agent": "Agent 1 \u2014 ML Ensemble",
+    "risk_score": 40.5,
+    "verdict": "MEDIUM",
+    "top_factors": [
+      {
+        "feature": "Curricular_units_2nd_sem_approved",
+        "value": 5.0,
+        "importance": 0.1647
+      },
+      {
+        "feature": "Curricular_units_2nd_sem_grade",
+        "value": 10.4,
+        "importance": 0.1086
+      },
+      {
+        "feature": "Curricular_units_1st_sem_approved",
+        "value": 5.0,
+        "importance": 0.0833
+      },
+      {
+        "feature": "Curricular_units_1st_sem_grade",
+        "value": 12.4,
+        "importance": 0.0667
+      },
+      {
+        "feature": "Tuition_fees_up_to_date",
+        "value": 1.0,
+        "importance": 0.0625
+      }
+    ]
+  },
+  "agent2": {
+    "risk_category": "LOW",
+    "rules_fired": [],
+    "reasoning_chain": [],
+    "priority_flags": [
+      "\u2691 Displaced Student \u2014 May Need Extra Support"
+    ],
+    "actions": [],
+    "override_ml": false,
+    "override_reason": null
+  },
+  "agent3": {
+    "final_risk": "MEDIUM",
+    "summary": "This student is at a medium risk level due to a moderate GPA and a potential for academic improvement.",
+    "interventions": [
+      {
+        "step": 1,
+        "action": "Encourage the student to meet with an academic advisor to discuss course selection and study strategies.",
+        "when": "Immediately"
+      },
+      {
+        "step": 2,
+        "action": "Recommend the student explore tutoring or study groups to enhance learning.",
+        "when": "Within 1 week"
+      },
+      {
+        "step": 3,
+        "action": "Offer resources and support for time management and stress management, such as workshops or online tools.",
+        "when": "Within 2 weeks"
+      }
+    ],
+    "message_to_student": "Your academic performance shows potential for improvement. Let's work together to unlock your full potential and achieve your academic goals.",
+    "escalate": false
+  },
+  "final": {
+    "student_id": "STU_REAL_001",
+    "ml_score": 40.5,
+    "expert": "LOW",
+    "final_risk": "MEDIUM",
+    "conflict": false,
+    "escalate": false
+  }
+}

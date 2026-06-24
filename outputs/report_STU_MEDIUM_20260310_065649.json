@@ -1,0 +1,105 @@
+{
+  "student_id": "STU_MEDIUM",
+  "timestamp": "2026-03-10T06:55:47.972449",
+  "agent1": {
+    "agent": "Agent 1 \u2014 ML Ensemble",
+    "risk_score": 86.5,
+    "verdict": "CRITICAL",
+    "top_factors": [
+      {
+        "feature": "Curricular_units_2nd_sem_approved",
+        "value": 3,
+        "importance": 0.1647
+      },
+      {
+        "feature": "Curricular_units_2nd_sem_grade",
+        "value": 10.5,
+        "importance": 0.1086
+      },
+      {
+        "feature": "Curricular_units_1st_sem_approved",
+        "value": 2,
+        "importance": 0.0833
+      },
+      {
+        "feature": "Curricular_units_1st_sem_grade",
+        "value": 11.0,
+        "importance": 0.0667
+      },
+      {
+        "feature": "Tuition_fees_up_to_date",
+        "value": 0,
+        "importance": 0.0625
+      }
+    ]
+  },
+  "agent2": {
+    "risk_category": "HIGH",
+    "rules_fired": [
+      {
+        "id": "R02",
+        "name": "Low Approval Rate Sem 1",
+        "severity": "HIGH",
+        "message": "Only 2/6 units approved in sem 1 (33%)"
+      },
+      {
+        "id": "R09",
+        "name": "Tuition Not Paid",
+        "severity": "HIGH",
+        "message": "Tuition fees are overdue"
+      },
+      {
+        "id": "R10",
+        "name": "Debtor",
+        "severity": "MEDIUM",
+        "message": "Student flagged as a debtor"
+      }
+    ],
+    "reasoning_chain": [
+      "[HIGH] Low Approval Rate Sem 1: Only 2/6 units approved in sem 1 (33%)",
+      "[HIGH] Tuition Not Paid: Tuition fees are overdue",
+      "[MEDIUM] Debtor: Student flagged as a debtor"
+    ],
+    "priority_flags": [
+      "\u2691 Tuition Overdue \u2014 Financial Risk"
+    ],
+    "actions": [
+      "Financial counseling referral",
+      "Academic support and tutoring referral",
+      "Financial aid office referral"
+    ],
+    "override_ml": false,
+    "override_reason": null
+  },
+  "agent3": {
+    "final_risk": "MEDIUM",
+    "summary": "This student is a debtor with a low approval rate in their first semester, indicating potential academic challenges and financial difficulties.",
+    "interventions": [
+      {
+        "step": 1,
+        "action": "Contact the student to discuss their academic progress and potential financial aid options.",
+        "when": "Immediately"
+      },
+      {
+        "step": 2,
+        "action": "Offer a payment plan for overdue tuition fees.",
+        "when": "Within 24 hours"
+      },
+      {
+        "step": 3,
+        "action": "Encourage the student to meet with a financial aid counselor to explore available resources.",
+        "when": "Within 7 days"
+      }
+    ],
+    "message_to_student": "We're here to support you in achieving your academic goals. Let's work together to address your outstanding tuition and explore resources that can help you succeed.",
+    "escalate": true
+  },
+  "final": {
+    "student_id": "STU_MEDIUM",
+    "ml_score": 86.5,
+    "expert": "HIGH",
+    "final_risk": "MEDIUM",
+    "conflict": false,
+    "escalate": true
+  }
+}

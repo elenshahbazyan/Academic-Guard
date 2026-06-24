@@ -1,0 +1,78 @@
+{
+  "student_id": "STU_LOW",
+  "timestamp": "2026-03-10T07:02:44.653910",
+  "agent1": {
+    "agent": "Agent 1 \u2014 ML Ensemble",
+    "risk_score": 12.8,
+    "verdict": "LOW",
+    "top_factors": [
+      {
+        "feature": "Curricular_units_2nd_sem_approved",
+        "value": 6,
+        "importance": 0.1647
+      },
+      {
+        "feature": "Curricular_units_2nd_sem_grade",
+        "value": 15.0,
+        "importance": 0.1086
+      },
+      {
+        "feature": "Curricular_units_1st_sem_approved",
+        "value": 6,
+        "importance": 0.0833
+      },
+      {
+        "feature": "Curricular_units_1st_sem_grade",
+        "value": 14.5,
+        "importance": 0.0667
+      },
+      {
+        "feature": "Tuition_fees_up_to_date",
+        "value": 1,
+        "importance": 0.0625
+      }
+    ]
+  },
+  "agent2": {
+    "risk_category": "LOW",
+    "rules_fired": [],
+    "reasoning_chain": [],
+    "priority_flags": [
+      "\u2691 Scholarship Holder \u2014 Priority Support"
+    ],
+    "actions": [],
+    "override_ml": false,
+    "override_reason": null
+  },
+  "agent3": {
+    "final_risk": "LOW",
+    "summary": "This student is performing well academically and financially, but their academic performance could be further enhanced.",
+    "interventions": [
+      {
+        "step": 1,
+        "action": "Encourage the student to explore academic resources and support services available on campus.",
+        "when": "After the student's first semester"
+      },
+      {
+        "step": 2,
+        "action": "Recommend the student connect with a peer mentor or academic advisor for additional guidance and support.",
+        "when": "After the student's first semester"
+      },
+      {
+        "step": 3,
+        "action": "Suggest the student participate in study groups or review sessions to improve their understanding of course material.",
+        "when": "After the student's first semester"
+      }
+    ],
+    "message_to_student": "Keep up the great work! Remember to utilize the resources available to you and don't hesitate to reach out for help if you need it.",
+    "escalate": false
+  },
+  "final": {
+    "student_id": "STU_LOW",
+    "ml_score": 12.8,
+    "expert": "LOW",
+    "final_risk": "LOW",
+    "conflict": false,
+    "escalate": false
+  }
+}

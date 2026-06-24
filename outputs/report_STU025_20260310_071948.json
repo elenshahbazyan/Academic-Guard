@@ -1,0 +1,107 @@
+{
+  "student_id": "STU025",
+  "timestamp": "2026-03-10T07:18:40.135315",
+  "agent1": {
+    "agent": "Agent 1 \u2014 ML Ensemble",
+    "risk_score": 75.7,
+    "verdict": "HIGH",
+    "top_factors": [
+      {
+        "feature": "Curricular_units_2nd_sem_approved",
+        "value": 1,
+        "importance": 0.1647
+      },
+      {
+        "feature": "Curricular_units_2nd_sem_grade",
+        "value": 15.0,
+        "importance": 0.1086
+      },
+      {
+        "feature": "Curricular_units_1st_sem_approved",
+        "value": 1,
+        "importance": 0.0833
+      },
+      {
+        "feature": "Curricular_units_1st_sem_grade",
+        "value": 19.0,
+        "importance": 0.0667
+      },
+      {
+        "feature": "Tuition_fees_up_to_date",
+        "value": 0,
+        "importance": 0.0625
+      }
+    ]
+  },
+  "agent2": {
+    "risk_category": "HIGH",
+    "rules_fired": [
+      {
+        "id": "R04",
+        "name": "Low Approval Rate Sem 2",
+        "severity": "HIGH",
+        "message": "Only 1/5 units approved in sem 2 (20%)"
+      },
+      {
+        "id": "R09",
+        "name": "Tuition Not Paid",
+        "severity": "HIGH",
+        "message": "Tuition fees are overdue"
+      },
+      {
+        "id": "R12",
+        "name": "Scholarship at Risk",
+        "severity": "HIGH",
+        "message": "Scholarship student with ML risk score 75.7/100"
+      }
+    ],
+    "reasoning_chain": [
+      "[HIGH] Low Approval Rate Sem 2: Only 1/5 units approved in sem 2 (20%)",
+      "[HIGH] Tuition Not Paid: Tuition fees are overdue",
+      "[HIGH] Scholarship at Risk: Scholarship student with ML risk score 75.7/100"
+    ],
+    "priority_flags": [
+      "\u2691 Scholarship Holder \u2014 Priority Support",
+      "\u2691 Tuition Overdue \u2014 Financial Risk",
+      "\u2691 Displaced Student \u2014 May Need Extra Support"
+    ],
+    "actions": [
+      "Notify scholarship office + academic advisor immediately",
+      "Schedule advisor meeting this week",
+      "Financial aid office referral"
+    ],
+    "override_ml": false,
+    "override_reason": null
+  },
+  "agent3": {
+    "final_risk": "HIGH",
+    "summary": "This student is at high risk due to a low approval rate in their second semester and overdue tuition fees.",
+    "interventions": [
+      {
+        "step": 1,
+        "action": "Contact the student to discuss their academic progress and tuition payment plan.",
+        "when": "Immediately"
+      },
+      {
+        "step": 2,
+        "action": "Provide information about scholarship eligibility and potential consequences for non-payment.",
+        "when": "Immediately"
+      },
+      {
+        "step": 3,
+        "action": "Collaborate with the student to develop a plan for addressing the tuition debt and improving academic performance.",
+        "when": "Within 24 hours"
+      }
+    ],
+    "message_to_student": "We are here to help you succeed! Let's work together to address the outstanding tuition and improve your academic performance. We are committed to supporting your journey.",
+    "escalate": true
+  },
+  "final": {
+    "student_id": "STU025",
+    "ml_score": 75.7,
+    "expert": "HIGH",
+    "final_risk": "HIGH",
+    "conflict": false,
+    "escalate": true
+  }
+}

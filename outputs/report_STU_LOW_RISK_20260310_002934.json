@@ -1,0 +1,90 @@
+{
+  "student_id": "STU_LOW_RISK",
+  "timestamp": "2026-03-10T00:28:49.634454",
+  "agent1": {
+    "agent": "Agent 1 \u2014 ML Ensemble",
+    "risk_score": 25.7,
+    "verdict": "LOW",
+    "top_factors": [
+      {
+        "feature": "Curricular_units_2nd_sem_approved",
+        "value": 6.0,
+        "importance": 0.1647
+      },
+      {
+        "feature": "Curricular_units_2nd_sem_grade",
+        "value": 13.66666667,
+        "importance": 0.1086
+      },
+      {
+        "feature": "Curricular_units_1st_sem_approved",
+        "value": 6.0,
+        "importance": 0.0833
+      },
+      {
+        "feature": "Curricular_units_1st_sem_grade",
+        "value": 14.0,
+        "importance": 0.0667
+      },
+      {
+        "feature": "Tuition_fees_up_to_date",
+        "value": 0.0,
+        "importance": 0.0625
+      }
+    ]
+  },
+  "agent2": {
+    "risk_category": "HIGH",
+    "rules_fired": [
+      {
+        "id": "R09",
+        "name": "Tuition Not Paid",
+        "severity": "HIGH",
+        "message": "Tuition fees are overdue"
+      }
+    ],
+    "reasoning_chain": [
+      "[HIGH] Tuition Not Paid: Tuition fees are overdue"
+    ],
+    "priority_flags": [
+      "\u2691 Tuition Overdue \u2014 Financial Risk",
+      "\u2691 Displaced Student \u2014 May Need Extra Support"
+    ],
+    "actions": [
+      "Financial aid office referral"
+    ],
+    "override_ml": true,
+    "override_reason": "Expert rates risk higher than ML. Key rules: Tuition Not Paid"
+  },
+  "agent3": {
+    "final_risk": "MEDIUM",
+    "summary": "This student's academic performance and tuition status indicate a potential risk of academic and financial challenges.",
+    "interventions": [
+      {
+        "step": 1,
+        "action": "Contact the student to discuss their tuition payment status and potential payment plan options.",
+        "when": "Immediately"
+      },
+      {
+        "step": 2,
+        "action": "Provide information about available financial aid resources and scholarship opportunities.",
+        "when": "Within 24 hours"
+      },
+      {
+        "step": 3,
+        "action": "Offer academic support resources such as tutoring and study groups.",
+        "when": "Within 48 hours"
+      }
+    ],
+    "message_to_student": "We understand that financial challenges can arise. Let's work together to ensure you stay on track academically and financially. We are here to support you.",
+    "escalate": true
+  },
+  "final": {
+    "student_id": "STU_LOW_RISK",
+    "ml_score": 25.7,
+    "expert": "HIGH",
+    "final_risk": "MEDIUM",
+    "conflict": true,
+    "escalate": true
+  }
+}

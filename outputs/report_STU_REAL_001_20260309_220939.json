@@ -1,0 +1,78 @@
+{
+  "student_id": "STU_REAL_001",
+  "timestamp": "2026-03-09T22:08:42.454203",
+  "agent1": {
+    "agent": "Agent 1 \u2014 ML Ensemble",
+    "risk_score": 17.6,
+    "verdict": "LOW",
+    "top_factors": [
+      {
+        "feature": "Admission_grade",
+        "value": 133.0,
+        "importance": 0.53
+      },
+      {
+        "feature": "Age_at_enrollment",
+        "value": 18.0,
+        "importance": 0.2093
+      },
+      {
+        "feature": "Tuition_fees_up_to_date",
+        "value": 1.0,
+        "importance": 0.146
+      },
+      {
+        "feature": "Scholarship_holder",
+        "value": 0.0,
+        "importance": 0.0396
+      },
+      {
+        "feature": "Debtor",
+        "value": 0.0,
+        "importance": 0.0293
+      }
+    ]
+  },
+  "agent2": {
+    "risk_category": "LOW",
+    "rules_fired": [],
+    "reasoning_chain": [],
+    "priority_flags": [
+      "\u2691 Displaced Student \u2014 May Need Housing/Social Support"
+    ],
+    "actions": [],
+    "override_ml": false,
+    "override_reason": null
+  },
+  "agent3": {
+    "final_risk": "LOW",
+    "summary": "This student has not yet started their academic journey and has not yet achieved any grades. ",
+    "interventions": [
+      {
+        "step": 1,
+        "action": "Encourage the student to meet with an academic advisor to discuss course selection and academic planning.",
+        "when": "Immediately"
+      },
+      {
+        "step": 2,
+        "action": "Provide the student with resources on academic support services, such as tutoring and writing centers.",
+        "when": "Immediately"
+      },
+      {
+        "step": 3,
+        "action": "Connect the student with a peer mentor or student success coach for guidance and support.",
+        "when": "Within 1 week"
+      }
+    ],
+    "message_to_student": "We're here to support you on your academic journey! Let's work together to create a plan that helps you succeed.",
+    "escalate": false
+  },
+  "final": {
+    "student_id": "STU_REAL_001",
+    "ml_score": 17.6,
+    "expert": "LOW",
+    "final_risk": "LOW",
+    "conflict": false,
+    "escalate": false
+  }
+}
