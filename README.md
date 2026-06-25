@@ -54,11 +54,8 @@ The `Orchestrator` drives the three agents in sequence, threading a shared black
 
 ## Tech Stack
 
-- **Python** — core implementation
-- **scikit-learn** — Random Forest classifier, feature scaling, evaluation metrics
-- **pandas / joblib** — data handling and model persistence
-- **Ollama (gemma2:2b)** — local LLM inference for intervention planning
+- **Python** - core implementation
+- **scikit-learn** - Random Forest classifier, feature scaling, evaluation metrics
+- **pandas / joblib** - data handling and model persistence
+- **Ollama (gemma2:2b)** - local LLM inference for intervention planning
 
-    ├── model.joblib         # Persisted trained model + scaler
-    └── report_*.json        # Per-student analysis reports
-```
