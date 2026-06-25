@@ -10,9 +10,9 @@ This project addresses that gap with three cooperating agents, each responsible 
 
 | Agent | Reasoning Paradigm | Responsibility |
 |---|---|---|
-| **Agent 1 — ML Risk Scorer** | Statistical pattern recognition | Learns dropout patterns from historical data and produces a calibrated risk score |
-| **Agent 2 — Expert System** | Symbolic, rule-based reasoning | Encodes institutional policy and domain knowledge as explicit, auditable rules |
-| **Agent 3 — LLM Planner** | Natural-language synthesis | Reconciles Agents 1 & 2 into a structured, human-readable intervention plan |
+| **Agent 1 - ML Risk Scorer** | Statistical pattern recognition | Learns dropout patterns from historical data and produces a calibrated risk score |
+| **Agent 2 - Expert System** | Symbolic, rule-based reasoning | Encodes institutional policy and domain knowledge as explicit, auditable rules |
+| **Agent 3 - LLM Planner** | Natural-language synthesis | Reconciles Agents 1 & 2 into a structured, human-readable intervention plan |
 
 Each agent writes its findings to a shared `blackboard` dictionary that is progressively enriched as it passes through the pipeline, and the orchestrator persists the final result as a structured report per student.
 
